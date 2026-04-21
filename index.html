@@ -3,113 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahbini — Lyrics by Abu Sayed</title>
-    <meta name="description" content="Song Ahbini Lyric ليل الشوق ينادي روحيتعالي داوي كل جروحيأنتِ النبض ونار حنينيبين الظلال خذيني وأحبينيतेरी आँखों में है वो नशाजिसमें डूबा है ये दिल मे...">
+    <title>Ahbini — Original Song by Abu Sayed</title>
+    <meta name="description" content="Official lyrics for 'Ahbini', an original song by Abu Sayed. Explore the storytelling and emotions of this unique composition.">
     
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ahbini — Original Lyrics by Abu Sayed">
+    <meta property="og:description" content="Explore the official lyrics and storytelling of 'Ahbini' by Bangladeshi songwriter Abu Sayed.">
+    <meta property="og:type" content="music.song">
+    <meta property="og:url" content="https://github.com/ImAbuSayed/ahbini">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicComposition",
+  "name": "Ahbini",
+  "composer": {
+    "@type": "Person",
+    "name": "Abu Sayed",
+    "url": "https://abusayed.com.bd",
+    "sameAs": [
+      "https://www.facebook.com/AbuSayed.TheCultOfPersonality",
+      "https://github.com/ImAbuSayed",
+      "https://music.abusayed.com.bd",
+      "https://www.youtube.com/@AbuSayedMusic",
+      "https://open.spotify.com/artist/6vnjuWLcV3nHwIFeozztMv",
+      "https://music.apple.com/ae/artist/abu-sayed/1622976966",
+      "https://www.tiktok.com/@imabusayed",
+      "https://www.instagram.com/AbuSayedMusic/",
+      "https://www.linkedin.com/in/imabusayed/",
+      "https://www.x.com/AbuSayedMusic",
+      "https://www.facebook.com/AbuSayedMusic"
+    ]
+  },
+  "lyricist": {
+    "@id": "https://abusayed.com.bd#person"
+  },
+  "lyrics": {
+    "@type": "CreativeWork",
+    "text": "[Clean lyric will be pushed here]"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Abu Sayed Music"
+  }
+}
+    </script>
+
     <style>
         :root {
-            --bg: #0f172a;
-            --card: #1e293b;
-            --accent: #38bdf8;
-            --text: #f1f5f9;
-            --muted: #94a3b8;
+            --bg-color: #0b0e14;
+            --card-bg: #161b22;
+            --accent-color: #58a6ff;
+            --accent-glow: rgba(88, 166, 255, 0.15);
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --heading-color: #ffffff;
         }
         body {
             font-family: 'Outfit', sans-serif;
-            background: var(--bg);
-            color: var(--text);
+            background-color: var(--bg-color);
+            color: var(--text-main);
             margin: 0;
-            padding: 40px 20px;
-            line-height: 1.8;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
         }
         .container {
-            max-width: 700px;
+            max-width: 800px;
             width: 100%;
-            background: var(--card);
-            padding: 50px;
-            border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            background: var(--card-bg);
+            padding: 40px 60px;
+            border-radius: 32px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 100px var(--accent-glow);
+            border: 1px solid rgba(255,255,255,0.08);
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
         }
-        .featured-img {
-            width: 100%;
-            border-radius: 16px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
         }
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin: 0 0 10px 0;
-            line-height: 1.1;
+            font-size: 3.5rem;
+            color: var(--heading-color);
+            margin: 10px 0;
+            letter-spacing: -1px;
         }
-        .meta {
-            color: var(--accent);
-            font-weight: 600;
+        .artist {
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
+            letter-spacing: 4px;
+            font-weight: 600;
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
             margin-bottom: 30px;
         }
-        .excerpt {
-            font-style: italic;
-            color: var(--muted);
-            border-left: 3px solid var(--accent);
-            padding-left: 20px;
-            margin-bottom: 40px;
+        .btn-speak {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-main);
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        .btn-speak:hover {
+            background: var(--accent-color);
+            color: #000;
+            transform: translateY(-2px);
         }
         .lyrics {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             white-space: pre-wrap;
-            margin-bottom: 50px;
+            color: var(--text-main);
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 300;
+            animation: fadeIn 1.2s ease-out;
         }
-        .links {
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
             border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
+            padding-top: 40px;
+        }
+        .social-links {
+            margin: 20px 0;
             display: flex;
-            gap: 20px;
+            justify-content: center;
+            gap: 25px;
             flex-wrap: wrap;
         }
-        .btn {
+        .social-links a {
+            color: var(--text-main);
             text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 12px;
             font-weight: 600;
+            font-size: 0.9rem;
+            padding: 5px 12px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
             transition: all 0.2s;
         }
-        .btn-primary { background: var(--accent); color: #000; }
-        .btn-secondary { background: rgba(255,255,255,0.05); color: var(--text); border: 1px solid rgba(255,255,255,0.1); }
-        .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--muted);
+        .social-links a:hover {
+            color: var(--accent-color);
+            background: rgba(88, 166, 255, 0.1);
+        }
+        .copyright {
+            margin-top: 30px;
+            opacity: 0.6;
+            font-size: 0.8rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 600px) {
+            .container { padding: 30px 20px; }
+            h1 { font-size: 2.2rem; }
+            .lyrics { font-size: 1.1rem; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://abusayed.com.bd/wp-content/uploads/2026/04/Ahbini.webp" alt="Ahbini" class="featured-img">
-        <div class="meta">Original Composition</div>
-        <h1>Ahbini</h1>
-        <div class="excerpt">Song Ahbini Lyric ليل الشوق ينادي روحيتعالي داوي كل جروحيأنتِ النبض ونار حنينيبين الظلال خذيني وأحبينيतेरी आँखों में है वो नशाजिसमें डूबा है ये दिल मेरापागल मुझे तूने कर दियातू ही तो है मेरी हर दुआEvery look is pulling me deepSecrets that your shadows keepTake my hand and lose controlWe are burning body and soulচোখের […]</div>
-        
-        <div class="lyrics">Song<br>Ahbini<br>Lyric<br>ليل الشوق ينادي روحي<br>تعالي داوي كل جروحي<br>أنتِ النبض ونار حنيني<br>بين الظلال خذيني وأحبيني<br>तेरी आँखों में है वो नशा<br>जिसमें डूबा है ये दिल मेरा<br>पागल मुझे तूने कर दिया<br>तू ही तो है मेरी हर दुआ<br>Every look is pulling me deep<br>Secrets that your shadows keep<br>Take my hand and lose control<br>We are burning body and soul<br>চোখের তারায় লুকিয়ে আছে নীরব এক টান<br>বুকের ভেতর জেগে থাকে অজানা অনুভবের গান<br>নীরব রাতে ভাসে শুধু তোমারই ছায়া<br>মনের মাঝে ডেকে যায় অচেনা এক মায়া<br>साँसों की ये कैसी है अगन<br>बेकरार है ये मेरा मन<br>पास आ तू दूर ना जा<br>धड़कनों की सुन ले सदा<br>ভালোবাসো আমায় তুমি আরও একবার<br>এই হৃদয় শুধু যে তোমার<br>হারিয়ে যাবো তোমারই ওই প্রেমে<br>থেকো তুমি আমারই এই প্রাণে<br>نار العشق تحرق كياني<br>في عيونكِ أرى زماني<br>خذني إليكَ ولا تبالي<br>أنتَ حلمي وكل آمالي<br>ਅੱਖਾਂ ਵਿੱਚ ਨਸ਼ਾ ਤੇਰਾ ਹੀ ਛਾ ਗਿਆ<br>ਮੇਰੇ ਦਿਲ ਨੂੰ ਤੂੰ ਸੋਹਣੀਏ ਭਾ ਗਿਆ<br>ਤੇਰੇ ਬਿਨਾਂ ਹੁਣ ਚੈਨ ਨਾ ਆਵੇ<br>ਇਸ਼ਕ ਤੇਰਾ ਮੈਨੂੰ ਪਾਗਲ ਬਣਾਵੇ<br>أحبيني بلا أي حدود<br>وكسري من أجلي القيود<br>أنا لكَ في كل الليالي<br>يا قمراً ينير خيالي<br>दर्द-ए-इश्क़ की ये है दास्ताँ<br>तेरे सिवा मेरा है कहाँ<br>तू जो मिला तो मिल गई ज़मीन<br>तेरे बिना है सूना आसमाँ<br>أسمع صدى صوتكِ ينادي<br>يوقظ الشوق في فؤادي<br>أقترب مني يا حياتي<br>أنتَ في قلبي حتى مماتي<br>ভালোবাসো আমায় তুমি আরও একবার<br>এই হৃদয় শুধু যে তোমার<br>হারিয়ে যাবো তোমারই ওই প্রেমে<br>থেকো তুমি আমারই এই প্রাণে<br>ਰੂਹਾਂ ਦਾ ਇਹ ਮੇਲ ਹੈ ਸੱਚਾ<br>ਪਿਆਰ ਮੇਰਾ ਨਹੀਂ ਹੈ ਕੱਚਾ<br>ਤੇਰੀਆਂ ਬਾਹਾਂ ਵਿੱਚ ਮਰ ਜਾਵਾਂ<br>ਤੇਰੇ ਲੱਗ ਜਾਵਾਂ ਮੈਂ ਪਰਛਾਵਾਂ<br>Touch the silence, let the rhythm speak<br>Caught inside the magic that we seek<br>They feel the vibe… Sayed inside….. Sayed… Sayed…..<br>Shadows dancing close across the floor<br>Every single heartbeat begging more<br>Burn into the fire of the night<br>तेरी बाँहों में जन्नत है मिली<br>दिल की हर एक धड़कन है खिली<br>तू ही मेरा इश्क़, तू जुनून<br>तेरे बिना ना है कोई सुकून<br>في همس الليل يغيب الكلام<br>ويبقى العشق يضيء الظلام<br>أحبيني حتى نهاية الزمان<br>أنتِ البداية وكل الأمان<br>أحبيني… أحبيني…</div>
-        
-        <div class="links">
-            <a href="https://abusayed.com.bd/projects/ahbini/" class="btn btn-primary" target="_blank">View on Website</a>
-            <a href="https://github.com/ImAbuSayed/ahbini" class="btn btn-secondary" target="_blank">GitHub Repo</a>
+        <header>
+            <div class="artist">Official Song Lyrics</div>
+            <h1>Ahbini</h1>
+            <div style="color: var(--text-muted); font-style: italic;">Original Composition by Abu Sayed</div>
+        </header>
+
+        <div class="controls">
+            <button class="btn-speak" id="speakBtn">
+                <span id="speakIcon">🔊</span> <span id="speakText">Read Aloud</span>
+            </button>
         </div>
-        
+
+        <article class="lyrics" id="lyricText">
+            [Clean lyric will be pushed here]
+        </article>
+
         <footer>
-            <p>© Abu Sayed — <a href="https://abusayed.com.bd" style="color:inherit">abusayed.com.bd</a></p>
+            <div class="social-links">
+                <a href="https://abusayed.com.bd" target="_blank">Personal Website</a>
+                <a href="https://music.abusayed.com.bd" target="_blank">Music Portal</a>
+                <a href="https://www.facebook.com/AbuSayed.TheCultOfPersonality" target="_blank">Facebook</a>
+                <a href="https://www.youtube.com/@AbuSayedMusic" target="_blank">YouTube</a>
+                <a href="https://www.instagram.com/AbuSayedMusic/" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@imabusayed" target="_blank">TikTok</a>
+                <a href="https://www.x.com/AbuSayedMusic" target="_blank">X</a>
+                <a href="https://www.linkedin.com/in/imabusayed/" target="_blank">LinkedIn</a>
+                <a href="https://open.spotify.com/artist/6vnjuWLcV3nHwIFeozztMv" target="_blank">Spotify</a>
+                <a href="https://music.apple.com/ae/artist/abu-sayed/1622976966" target="_blank">Apple Music</a>
+                <a href="https://github.com/ImAbuSayed/ahbini" target="_blank">Source Repository</a>
+                <a href="https://github.com/ImAbuSayed/ahbini/blob/main/LICENSE.md" target="_blank">License</a>
+            </div>
+            
+            <p>This work is the original intellectual property of Abu Sayed.</p>
+            
+            <div class="copyright">
+                &copy; 2026 Abu Sayed. All Rights Reserved.
+            </div>
         </footer>
     </div>
+
+    <script>
+        const btn = document.getElementById('speakBtn');
+        const textElement = document.getElementById('lyricText');
+        const icon = document.getElementById('speakIcon');
+        const label = document.getElementById('speakText');
+        
+        let speaking = false;
+        let synth = window.speechSynthesis;
+        let utterance = null;
+
+        btn.onclick = () => {
+            if (speaking) {
+                synth.cancel();
+                speaking = false;
+                icon.innerText = '🔊';
+                label.innerText = 'Read Aloud';
+            } else {
+                utterance = new SpeechSynthesisUtterance(textElement.innerText);
+                // Try to find a nice English voice
+                const voices = synth.getVoices();
+                const engVoice = voices.find(v => v.lang.startsWith('en') && v.name.includes('Google'));
+                if (engVoice) utterance.voice = engVoice;
+                
+                utterance.rate = 0.9;
+                utterance.onend = () => {
+                    speaking = false;
+                    icon.innerText = '🔊';
+                    label.innerText = 'Read Aloud';
+                };
+                
+                synth.speak(utterance);
+                speaking = true;
+                icon.innerText = '⏹';
+                label.innerText = 'Stop Reading';
+            }
+        };
+        
+        // Pre-load voices
+        window.speechSynthesis.onvoiceschanged = () => { synth.getVoices(); };
+    </script>
 </body>
 </html>
